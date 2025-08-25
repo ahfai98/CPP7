@@ -9,9 +9,7 @@ void swap(T &a, T &b)
 template <typename T>
 T &min(T &a, T &b)
 {
-	if (a == b)
-		return (b);
-	else if (a < b)
+	if (a < b)
 		return(a);
 	return(b);
 }
@@ -19,9 +17,7 @@ T &min(T &a, T &b)
 template <typename T>
 T &max(T &a, T &b)
 {
-	if (a == b)
-		return (b);
-	else if (a < b)
-		return(b);
-	return(a);
+	if (a > b)
+		return (a);
+	return(b);
 }
