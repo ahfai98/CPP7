@@ -22,6 +22,11 @@ void increment(int& element)
 	element++;
 }
 
+void increment(float& element)
+{
+	element += 1.1;
+}
+
 void appendCharA(std::string &s)
 {
 	s += "A";
