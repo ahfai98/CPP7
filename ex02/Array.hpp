@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <stdexcept>
+#include <stdlib.h>
 
 template<typename T>
 class Array
@@ -40,6 +41,12 @@ class Array
 			return (*this);
 		}
 		T &operator[](unsigned int i)
+		{
+			if (i >= _size)
+				throw OutofBoundsException();
+			return _array[i];
+		}
+		const T &operator[](unsigned int i) const
 		{
 			if (i >= _size)
 				throw OutofBoundsException();
